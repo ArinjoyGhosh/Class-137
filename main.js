@@ -31,6 +31,7 @@ function gotResults(error, results) {
 function draw() {
     image(vdo, 0, 0, 400, 400);
     if(status != "") {
+        objectDetector.detect(vdo, gotResults);
         for(i = 0; i <= objects.length; i++) {
             fill("red");
             stroke("black");
